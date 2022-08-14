@@ -1,4 +1,11 @@
 package project1;
+/**
+ * This class represents our Buildings
+ * @author Joshua Domzalski
+ * Programming Project 1
+ * Summer 2022
+ */
+
 
 public class Building {
 	protected String projectName;
@@ -8,6 +15,10 @@ public class Building {
 	protected String subgroup;
 	
 	//end variables
+	
+	/*
+	 * Empty argument constructor
+	 */
 	public Building() {
 		this.projectName = " ";
 		this.completeAddress = " ";
@@ -17,6 +28,14 @@ public class Building {
 		
 	}
 	//end empty-argument constructor
+	/**
+	 * Preferred constructor
+	 * @param projectName
+	 * @param completeAddress
+	 * @param totalSquareFeet
+	 * @param occupancyGroup
+	 * @param subgroup
+	 */
 	public Building(String projectName, String completeAddress, double totalSquareFeet, String occupancyGroup, String subgroup) {
 		setProjectName(projectName);
 		setCompleteAddress(completeAddress);
@@ -25,14 +44,26 @@ public class Building {
 		setSubgroup(subgroup);
 	}
 	//end preferred constructor
+	
+	/*
+	 * Method to simulate drawing the building
+	 */
 	public void draw() {
 		System.out.println("Drawing code for <<Building>>");
 	}
 	//end draw method
+	
+	/*
+	 * Method to display the data as a toString
+	 */
 	public String displayData() {
 		return toString();
 	}
 	//end displayData method
+	
+	/*
+	 * Getters and setters
+	 */
 	public String getProjectName() {
 		return projectName;
 	}
@@ -64,6 +95,9 @@ public class Building {
 		this.subgroup = subgroup;
 	}
 	//end getters and setters
+	/*
+	 * toString method
+	 */
 	@Override
 	public String toString() {
 		return "Building [projectName=" + projectName + ", completeAddress=" + completeAddress + ", totalSquareFeet="

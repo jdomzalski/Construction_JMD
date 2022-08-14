@@ -1,5 +1,12 @@
 package project1;
 
+/**
+ * This class represents our Mall and is an extension of the Business class
+ * @author Joshua Domzalski
+ * Programming Project 1
+ * Summer 2022
+ */
+
 public class Mall extends Business{
 
 	private int numRentedUnits;
@@ -7,15 +14,34 @@ public class Mall extends Business{
 	private int numParkingSpaces;
 	//end variables
 	
+	/**
+	 * Empty argument constructor
+	 */
+	
 	public Mall() {
+		super();
 		this.numRentedUnits = 0;
 		this.medianUnitSize = 0.0;
 		this.numParkingSpaces = 0;
 		
 	}
 	//end empty-argument constructor
+	
+	/**
+	 * Preferred constructor
+	 * @param projectName
+	 * @param completeAddress
+	 * @param totalSquareFeet
+	 * @param occupancyGroup
+	 * @param subgroup
+	 * @param numRentableUnits
+	 * @param numRentedUnits
+	 * @param medianUnitSize
+	 * @param numParkingSpaces
+	 */
 	public Mall(String projectName, String completeAddress, double totalSquareFeet, String occupancyGroup, String subgroup, int numRentableUnits,
 			int numRentedUnits, double medianUnitSize, int numParkingSpaces) {
+		super();
 		setProjectName(projectName);
 		setCompleteAddress(completeAddress);
 		setTotalSquareFeet(totalSquareFeet);
@@ -27,14 +53,27 @@ public class Mall extends Business{
 		setNumParkingSpaces(numParkingSpaces);
 	}
 	//end preferred constructor
+	
+	/**
+	 * Draw method simulating a drawing of the Mall
+	 */
 	public void draw() {
 		System.out.println("Drawing code for <<Mall>>");
 	}
 	//end draw method
+	
+	/**
+	 * Method that will display the data in a toStirng
+	 */
 	public String displayData() {
 		return toString();
 	}
 	//end displayData method
+	
+	/**
+	 * Getters and Setters
+	 * @return
+	 */
 	public int getNumRentedUnits() {
 		return numRentedUnits;
 	}
@@ -54,6 +93,10 @@ public class Mall extends Business{
 		this.numParkingSpaces = numParkingSpaces;
 	}
 	//end getters and setters
+	
+	/**
+	 * toString method
+	 */
 	@Override
 	public String toString() {
 		return "Mall [projectName=" + projectName + ", completeAddress=" + completeAddress + ", totalSquareFeet=" + totalSquareFeet

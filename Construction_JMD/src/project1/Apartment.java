@@ -1,4 +1,10 @@
 package project1;
+/**
+ * This class represents our Apartments and is an extension of the Residential class
+ * @author Joshua Domzalski
+ * Programming Project 1
+ * Summer 2022
+ */
 
 public class Apartment extends Residential {
 
@@ -7,15 +13,35 @@ public class Apartment extends Residential {
 	private boolean parkingAvailable;
 	//end variables
 	
+	/**
+	 * Empty argument constructor
+	 */
+	
 	public Apartment() {
+		super();
 		this.numRentableUnits = 0;
 		this.avgUnitSize = 0;
 		this.parkingAvailable = false;
 		
 	}
-	//end empty-argument constructor
+	/**
+	 * Preferred constructor
+	 * @param projectName
+	 * @param completeAddress
+	 * @param totalSquareFeet
+	 * @param occupancyGroup
+	 * @param subgroup
+	 * @param numBedrooms
+	 * @param numBathrooms
+	 * @param laundryRoom
+	 * @param numRentableUnits
+	 * @param avgUnitSize
+	 * @param parkingAvailable
+	 */
+			
 	public Apartment(String projectName, String completeAddress, double totalSquareFeet, String occupancyGroup, String subgroup,
 			int numBedrooms, int numBathrooms, boolean laundryRoom, int numRentableUnits, double avgUnitSize, boolean parkingAvailable) {
+		super();
 		setProjectName(projectName);
 		setCompleteAddress(completeAddress);
 		setTotalSquareFeet(totalSquareFeet);
@@ -29,15 +55,24 @@ public class Apartment extends Residential {
 		setParkingAvailable(parkingAvailable);
 		
 	}
-	//end preferred constructor
+	/**
+	 * Method to simulate drawing the Apartment
+	 */
 	public void draw() {
 		System.out.println("Drawing code for <<Apartment>>");
 	}
-	//end draw method
+	/**
+	 * Method to display the data in a toString
+	 */
+
 	public String displayData() {
 		return toString();
 	}
-	//end displayData method
+	/**
+	 * Getters and setters
+	 * @return
+	 */
+	
 	
 	public int getNumRentableUnits() {
 		return numRentableUnits;
